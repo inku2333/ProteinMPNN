@@ -68,19 +68,14 @@ For example to make a conda environment to run ProteinMPNN:
 * `conda create --name mlfold` - this creates conda environment called `mlfold`
 * `source activate mlfold` - this activate environment
 * `conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch` - install pytorch following steps from https://pytorch.org/
-
-=============================================================================================================================================
-如果使用windows系统，先下载好python3【https://www.python.org/】，
-如果不清楚python环境配置过程，请自行【百度】【Bing】【Google】【csdn】【知乎】【贴吧】，
-之后按照自己电脑的配置到pytorch官网【https://pytorch.org/】找到对应的参数进行pip下载，
-例如使用cpu就直接：
-pip3 install torch torchvision torchaudio
-N卡则是选择对应的CUDA参数
-然后补上：
-pip3 install numpy
-即可
-
-=============================================================================================================================================
+  
+-----------------------------------------------------------------------------------------------------
+如果使用windows系统:
+* 先下载好python3【 https://www.python.org 】
+* 如果不清楚python环境配置过程，请自行【百度】【Bing】【Google】【csdn】【知乎】【贴吧】
+* 之后按照自己电脑的配置到pytorch官网【 https://pytorch.org 】找到对应的参数进行pip下载
+* 例如使用cpu就直接：pip3 install torch torchvision torchaudio
+* 然后补上：pip3 install numpy
 
 -----------------------------------------------------------------------------------------------------
 These are provided `examples/`:
