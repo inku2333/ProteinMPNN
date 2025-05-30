@@ -4,15 +4,17 @@ Read [ProteinMPNN paper](https://www.biorxiv.org/content/10.1101/2022.06.03.4945
 
 To run ProteinMPNN clone this github repo and install Python>=3.0, PyTorch, Numpy. 
 
+(如果只是试用或者项目比较单一，这里推荐pip3直接下载，项目复杂并且熟悉环境的话可以用conda自己创建分配环境。 // If it's just a trial or the project is relatively single, I recommend downloading pip3 directly. If the project is complex and familiar with the environment, you can use conda to create and allocate the environment yourself)
+
 Full protein backbone models: `vanilla_model_weights/v_48_002.pt, v_48_010.pt, v_48_020.pt, v_48_030.pt`, `soluble_model_weights/v_48_010.pt, v_48_020.pt`.
 
 CA only models: `ca_model_weights/v_48_002.pt, v_48_010.pt, v_48_020.pt`. Enable flag `--ca_only` to use these models.
 
 Helper scripts: `helper_scripts` - helper functions to parse PDBs, assign which chains to design, which residues to fix, adding AA bias, tying residues etc.
 
-2025.05.30 update:
-1.    Adapt to the use of Windows system.
-2.    Simplified optimization of code structure. ^_^
+2025.05.30 update record:
+1.  适应Windows系统的直接使用。 // Adapt to the use of Windows system.
+2.  简单优化了下代码结构。 // Simplified optimization of code structure. ^_^
 
 Code organization:
 * `protein_mpnn_run.py` - the main script to initialialize and run the model.
@@ -66,6 +68,18 @@ For example to make a conda environment to run ProteinMPNN:
 * `conda create --name mlfold` - this creates conda environment called `mlfold`
 * `source activate mlfold` - this activate environment
 * `conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch` - install pytorch following steps from https://pytorch.org/
+
+=============================================================================================================================================
+如果使用windows系统，先下载好python3【https://www.python.org/】，
+如果不清楚python环境配置过程，请自行【百度】【Bing】【Google】【csdn】【知乎】【贴吧】，
+之后按照自己电脑的配置到pytorch官网【https://pytorch.org/】找到对应的参数进行pip下载，
+例如使用cpu就直接：
+pip3 install torch torchvision torchaudio
+然后补上：
+pip3 install numpy
+即可。
+=============================================================================================================================================
+
 -----------------------------------------------------------------------------------------------------
 These are provided `examples/`:
 * `submit_example_1.sh` - simple monomer example 
