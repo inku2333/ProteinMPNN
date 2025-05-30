@@ -10,6 +10,10 @@ CA only models: `ca_model_weights/v_48_002.pt, v_48_010.pt, v_48_020.pt`. Enable
 
 Helper scripts: `helper_scripts` - helper functions to parse PDBs, assign which chains to design, which residues to fix, adding AA bias, tying residues etc.
 
+2025.05.30 update:
+1.    Adapt to the use of Windows system.
+2.    Simplified optimization of code structure. ^_^
+
 Code organization:
 * `protein_mpnn_run.py` - the main script to initialialize and run the model.
 * `protein_mpnn_utils.py` - utility functions for the main script.
